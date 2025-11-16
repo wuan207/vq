@@ -1,0 +1,411 @@
+/* === BẢNG MÀU MỚI RỰC RỠ === */
+
+/* --- Cài đặt chung & Font chữ --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Thay đổi: Nền màu kem nhạt thay vì xám */
+    background-color: #FFF8E1; 
+    /* Thay đổi: Chữ màu nâu đậm cho dễ đọc */
+    color: #5D4037;
+}
+
+/* --- Phần Header & Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Giữ nền trắng cho header */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* Thay đổi: Màu thương hiệu sang màu cam cháy */
+    color: #FFA000; 
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* Thay đổi: Màu link đậm hơn */
+    color: #5D4037;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    /* Thay đổi: Hover ra màu cam cháy */
+    color: #FFA000;
+}
+
+/* --- Nội dung chính (Chung) --- */
+main {
+    max-width: 1200px;
+    margin: 2rem auto; 
+    padding: 0 1rem;
+}
+
+/* --- Trang Chủ (Hero Section) --- */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: url('../images/hero-image.jpg') no-repeat center center/cover;
+    color: rgb(234, 36, 36); 
+    border-radius: 8px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.cta-button {
+    /* Thay đổi: Nút kêu gọi hành động màu đỏ rực rỡ */
+    background-color: #D32F2F;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    /* Thay đổi: Hover đậm hơn */
+    background-color: #B71C1C;
+}
+
+/* --- TRANG THỰC ĐƠN --- */
+.menu-page h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    /* Thay đổi: Tiêu đề trang màu đỏ đậm */
+    color: #D32F2F;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem; 
+}
+
+.menu-item {
+    background-color: #fff; /* Giữ nền card trắng */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden; 
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    /* Thay đổi: Tiêu đề món ăn màu cam cháy */
+    color: #FFA000;
+    padding: 0.5rem 1rem 0;
+    margin: 0;
+}
+
+.menu-item p {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    /* Thay đổi: Mô tả màu nâu nhạt hơn */
+    color: #6D4C41; 
+}
+
+.menu-item .price {
+    display: block;
+    padding: 0 1rem 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* Thay đổi: Giá tiền màu đỏ đậm */
+    color: #D32F2F;
+}
+
+/* --- Chân trang --- */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    /* Thay đổi: Nền footer màu nâu đậm */
+    background-color: #4E342E;
+    /* Thay đổi: Chữ footer màu xám nhạt */
+    color: #E0E0E0;
+    margin-top: 2rem;
+}
+
+/* --- MEDIA QUERY: RESPONSIVE CHO DI ĐỘNG (Giữ nguyên) --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+}
+/* === CSS CHO TRANG GIỚI THIỆU (ABOUT.HTML) === */
+
+.about-hero {
+    text-align: center;
+    background-color: #5D4037; /* Màu nâu đậm */
+    color: white;
+    padding: 3rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.about-hero h1 {
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+.story-section {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.story-section img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story-content {
+    max-width: 60%;
+}
+
+.story-content h2 {
+    color: #D32F2F; /* Màu đỏ đậm */
+    font-size: 1.8rem;
+    border-bottom: 3px solid #FFA000; /* Gạch chân màu cam cháy */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.vision-points {
+    background-color: #FFECB3; /* Nền vàng nhạt */
+    padding: 1.5rem;
+    border-left: 5px solid #FFA000;
+    margin-top: 2rem;
+    border-radius: 4px;
+}
+
+.vision-points h3 {
+    color: #5D4037;
+    margin-top: 0;
+}
+
+/* --- Team Section --- */
+.team-section {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.team-section h2 {
+    color: #D32F2F;
+    margin-bottom: 2rem;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Ảnh tròn */
+    border: 5px solid #FFA000;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    color: #5D4037;
+    margin-bottom: 0.5rem;
+}
+
+/* RESPONSIVE CHO TRANG GIỚI THIỆU */
+@media (max-width: 850px) {
+    .story-section {
+        flex-direction: column; /* Chuyển thành xếp chồng trên mobile */
+        gap: 1.5rem;
+    }
+    .story-section img, .story-content {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+/* Tìm và thay thế đoạn này trong file style.css của bạn: */
+.contact-info h2, .contact-form-area h2 {
+    color: #FFA000; /* Màu cam cháy */
+    border-bottom: 2px solid #FFECB3;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* BẰNG ĐOẠN CSS MỚI NÀY: */
+.contact-info h2, .contact-form-area .form-title { /* Sử dụng .form-title cho tiêu đề form */
+    color: #D32F2F; /* Màu đỏ đậm cho tiêu đề Form */
+    font-size: 1.8rem;
+    border-bottom: 3px solid #FFA000;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem; /* Tăng khoảng cách dưới để đồng đều hơn */
+}
+
+
+/* Điều chỉnh input để đẹp hơn */
+.contact-form input[type="text"],
+.contact-form input[type="tel"], /* Đã thêm type="tel" */
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    /* Làm cho viền hơi bo tròn và nhạt màu hơn */
+    border: 1px solid #E0E0E0; 
+    border-radius: 6px; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FFA000; /* Đổi màu viền khi người dùng focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 160, 0, 0.4);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Nút Submit đã dùng .cta-button nên không cần chỉnh thêm */
+/* === CSS CHO MENU ITEM LÀ THẺ A (ĐỂ TRÔNG NHƯ DIV) === */
+.menu-item.link-item {
+    text-decoration: none; /* Bỏ gạch chân của link */
+    color: inherit; /* Cho màu chữ kế thừa từ body (màu nâu đậm) */
+    display: block; /* Quan trọng: Biến thẻ a thành khối để nó chiếm toàn bộ diện tích */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden; 
+    transition: transform 0.3s;
+}
+.menu-item.link-item:hover {
+    transform: translateY(-5px); /* Giữ hiệu ứng nhấc lên khi hover */
+}
+/* === CSS CHO TRANG CHI TIẾT MÓN ĂN (DISH DETAIL) === */
+
+.dish-detail {
+    padding: 2rem 0;
+}
+
+.back-link {
+    margin-bottom: 2rem;
+}
+.back-link a {
+    color: #FFA000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.detail-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detail-container img {
+    max-width: 45%;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.detail-content {
+    max-width: 55%;
+}
+
+.detail-content h1 {
+    color: #D32F2F;
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+
+.price-large {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFA000;
+    margin-bottom: 2rem;
+}
+
+.detail-content h2 {
+    color: #5D4037;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #FFECB3;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.detail-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+/* RESPONSIVE CHO TRANG CHI TIẾT */
+@media (max-width: 950px) {
+    .detail-container {
+        flex-direction: column; /* Xếp chồng trên màn hình nhỏ */
+        gap: 1.5rem;
+    }
+    .detail-container img, .detail-content {
+        max-width: 100%;
+    }
+}
